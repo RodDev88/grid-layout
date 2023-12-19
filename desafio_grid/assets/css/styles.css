@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar"
+    "aside main"
+    "aside main"
+    "footer footer";
+}
+
+/*definición grid-areas*/
+
+.navbar {
+    grid-area: navbar;
+    background-color: gainsboro;
+    border: 1px solid black;
+}
+
+
+.aside {
+    grid-area: aside;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.main {
+    grid-area: main;
+    background-color: gainsboro;
+    border: 1px solid black;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: gray;
+    border: 1px solid black;
+}
+
