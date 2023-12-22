@@ -1,36 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/*Grid container*/
+
 .grid-container {
     display: grid;
     grid-template-areas: 
-    "navbar navbar"
-    "aside main"
-    "aside main"
-    "footer footer";
+    "navbar navbar navbar"
+    "menu main main"
+    "footer footer footer";
+    grid-template-columns: 20% 80%;
 }
 
-/*definición grid-areas*/
+/*navbar*/
 
 .navbar {
     grid-area: navbar;
-    background-color: gainsboro;
-    border: 1px solid black;
-}
-
-
-.aside {
-    grid-area: aside;
+    height: 10vh;
     background-color: gray;
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
 }
 
-.main {
-    grid-area: main;
+.navbar h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+/*menu lateral*/
+
+.menu-lateral {
+    grid-area: menu;
+    height: 100vh;
     background-color: gainsboro;
-    border: 1px solid black;
+    padding-top: 2vh;
+}
+
+.categorias-menu {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.categorias-menu h4 {
+    font-size: 1.6vw;
+}
+
+.categorias-menu p {
+    font-size: 1.3vw;
+}
+
+/*PRODUCT-CONTAINER*/
+
+.product-container {
+    grid-area: main;
+    height: 100vh;
+    background-color: gainsboro;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,18em);
+    grid-template-rows: repeat(auto-fit,3fr);
+    grid-gap: 2% 10%;
+    padding-top: 2vh;
+    padding-right: 2vw;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+
+.product-photo {
+    flex-grow: 15;
+}
+
+.product-name {
+    flex-grow: 1;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-name h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.product-price {
+    flex-grow: 1;
+    background-color: beige;
+}
+
+.comprar-button {
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprar-button h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.comprar-button a {
+    text-decoration: none;
+    color: white;
 }
 
 .footer{
     grid-area: footer;
+    height: 7vh;
     background-color: gray;
-    border: 1px solid black;
+}
+
+.footer h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
